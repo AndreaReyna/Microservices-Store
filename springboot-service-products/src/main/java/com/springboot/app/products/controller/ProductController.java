@@ -16,12 +16,12 @@ public class ProductController {
 	@Autowired
 	private IproductService productService;
 	
-	@GetMapping("/products")
+	@GetMapping("/list")
 	public List<Product> findAll(){
 		return productService.findAll();
 	}
 	
-	@GetMapping("/products/{id}")
+	@GetMapping("/find/{id}")
 	public Product findById(@PathVariable Long id) throws Exception{
 		return productService.findById(id);
 	}
