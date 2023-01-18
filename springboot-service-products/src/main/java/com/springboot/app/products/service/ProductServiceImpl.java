@@ -27,4 +27,16 @@ public class ProductServiceImpl implements IproductService{
 		return productRepository.findById(id).orElseThrow(() -> new Exception("Product not found"));
 	}
 
+	@Override
+	@Transactional()
+	public Product save(Product product) {
+		return productRepository.save(product);
+	}
+
+	@Override
+	@Transactional()
+	public void deleteById(Long id) {
+		productRepository.deleteById(id);		
+	}
+
 }

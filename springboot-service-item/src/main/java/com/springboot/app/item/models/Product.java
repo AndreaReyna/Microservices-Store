@@ -1,15 +1,13 @@
 package com.springboot.app.item.models;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Product {
 
 	private Long id;
 	private String name;
 	private Double price;
-	private Date createAt;
-	
-	
+	private LocalDate createAt;
 	
 	public Product() {
 	}
@@ -47,11 +45,11 @@ public class Product {
 		this.price = price;
 	}
 
-	public Date getCreateAt() {
+	public LocalDate getCreateAt() {
 		return createAt;
 	}
 
-	public void setCreateAt(Date createAt) {
+	public void setCreateAt(LocalDate createAt) {
 		this.createAt = createAt;
 	}
 
