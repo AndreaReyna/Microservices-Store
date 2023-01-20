@@ -12,8 +12,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.springboot.app.commons.models.Product;
 import com.springboot.app.item.models.Item;
-import com.springboot.app.item.models.Product;
 
 @Service("ItemServiceImpl")
 public class ItemServiceImpl implements ItemService {

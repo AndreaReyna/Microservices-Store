@@ -1,7 +1,6 @@
 package com.springboot.app.products.controller;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springboot.app.products.models.entity.Product;
+import com.springboot.app.commons.models.Product;
 import com.springboot.app.products.service.IproductService;
 
 @RestController

@@ -2,7 +2,7 @@ package com.springboot.app.products.service;
 
 import java.util.List;
 
-import com.springboot.app.products.models.entity.Product;
+import com.springboot.app.commons.models.Product;
 
 public interface IproductService {
 	

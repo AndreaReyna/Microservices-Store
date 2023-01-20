@@ -1,18 +1,16 @@
-package com.springboot.app.products.models.entity;
+package com.springboot.app.commons.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
 
 @Entity
 @Table(name = "products")
@@ -28,6 +26,24 @@ public class Product implements Serializable{
 	private LocalDate createAt;
 	
 	private static final long serialVersionUID = 1453429780606578386L;
+
+	public Product() {
+	}	
+
+	public Product(Long id, String name, Double price, LocalDate createAt) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.createAt = createAt;
+	}
+
+	public Product(Long id, String name, Double price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
 
 	public Long getId() {
 		return id;
@@ -60,6 +76,5 @@ public class Product implements Serializable{
 	public void setCreateAt(LocalDate createAt) {
 		this.createAt = createAt;
 	}
-
 
 }

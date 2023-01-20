@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.springboot.app.commons.models.Product;
 import com.springboot.app.item.models.Item;
-import com.springboot.app.item.models.Product;
 import com.springboot.app.item.services.ItemService;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
@@ -39,7 +39,7 @@ public class ItemController {
 	
 	@GetMapping("/list")
 	public List<Item> findAll(@RequestParam(name="name") String name, @RequestHeader(name="token-request") String token){
-		System.out.println("name: " + name + " token: " + token );
+		//System.out.println("name: " + name + " token: " + token );
 		return itemService.findAll();
 	}
 	
