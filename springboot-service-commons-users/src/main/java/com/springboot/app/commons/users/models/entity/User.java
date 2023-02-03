@@ -32,6 +32,8 @@ public class User implements Serializable {
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	private List<Role> roles;
+	
+	private Integer Attempts;
 
 	public Long getId() {
 		return id;
@@ -96,6 +98,14 @@ public class User implements Serializable {
 
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
+	}
+	
+	public Integer getAttempts() {
+		return Attempts;
+	}
+
+	public void setAttempts(Integer attempts) {
+		Attempts = attempts;
 	}
 
 	private static final long serialVersionUID = -7971410007691466369L;
